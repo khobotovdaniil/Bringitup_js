@@ -16,7 +16,7 @@ export default class Form {
         });
     }
 
-    checkMailInputs () {
+    checkMailInputs() {
         const mailInputs = document.querySelectorAll('[type="email"]');
     
         mailInputs.forEach(input => {
@@ -88,7 +88,7 @@ export default class Form {
     init() {
         this.checkMailInputs();
         this.initMask();
-        
+
         this.forms.forEach(form => {
             form.addEventListener('submit', e => {
                 e.preventDefault();
