@@ -6,7 +6,7 @@ export default class Download {
 
     downloadItem(path) {
         const element = document.createElement('a');
-
+  
         element.setAttribute('href', path);
         element.setAttribute('download', 'nice_picture');
 
@@ -20,7 +20,8 @@ export default class Download {
 
     init() {
         this.btns.forEach(item => {
-            item.addEventListener('click', () => {
+            item.addEventListener('click', (e) => {
+                e.stopPropagation(); 
                 this.downloadItem(this.path);
             });
         });
